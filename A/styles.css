@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7C9FF2, #ADCAF7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 350px;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 24px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E5E5E5;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background: #F6F6F6;
+    outline: none;
+}
+
+input:focus {
+    border-color: #A2A2A2;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #7C9FF2;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6A8DDF;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-login span {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.signup {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #7C9FF2;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;

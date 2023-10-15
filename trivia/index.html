@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnswer(answer) {
+                let feedback = document.getElementById("feedback1");
+                if (answer === 'B') {
+                    feedback.innerText = "Correct!";
+                    feedback.style.color = "green";
+                } else {
+                    feedback.innerText = "Incorrect";
+                    feedback.style.color = "red";
+                }
+            }
+            function checkFreeResponse() {
+                let answer = document.getElementById("freeResponse").value;
+                let feedback = document.getElementById("feedback2");
+                if (answer === 'Yellow' || answer === 'yellow') {
+                    feedback.innerText = "Correct!";
+                    feedback.style.color = "green";
+                    document.getElementById("freeResponse").style.backgroundColor = "lightgreen";
+                } else {
+                    feedback.innerText = "Incorrect";
+                    feedback.style.color = "red";
+                    document.getElementById("freeResponse").style.backgroundColor = "pink";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the mascot of CS50?</h3>
+                <button onclick="checkAnswer('A')">A. A Cow </button>
+                <button onclick="checkAnswer('B')">B. A Duck </button>
+                <button onclick="checkAnswer('C')">C. A Swan </button>
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What color the mascot have?</h3>
+                <input type="text" id="freeResponse">
+                <button onclick="checkFreeResponse()">Check Answer</button>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

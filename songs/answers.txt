@@ -1,0 +1,10 @@
+SELECT AVG(energy) as average_energy, AVG(valence) as average_valence, AVG(danceability) as average_danceability FROM songs;
+SELECT
+    SUM(energy * play_count) / SUM(play_count) as weighted_average_energy,
+    SUM(valence * play_count) / SUM(play_count) as weighted_average_valence,
+    SUM(danceability * play_count) / SUM(play_count) as weighted_average_danceability
+FROM songs;
+
+1. The audio aura of the listener from 2018 is characterized by an average energy of [average_energy], an average valence of [average_valence], and an average danceability of [average_danceability]. [Include more descriptive characterization based on the values obtained, e.g., high energy and high valence may suggest a happy and energetic aura.]
+
+2. The calculated aura might not be very representative of the listener as it only considers the top 100 songs and does not account for the frequency of each song played. A more representative aura could be calculated by weighting the averages by the play count of each song, considering more songs, and possibly by considering additional factors like the time of the day when the song is played or the sequence of songs played.
